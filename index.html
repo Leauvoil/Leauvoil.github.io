@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('votre-image.jpg'); /* Remplacez par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .soundboard {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="soundboard">
+        <button onclick="playSound('/.cestmieux.mp3')">C'est mieux</button>
+        <button onclick="playSound('son2.mp3')">Décroche pas</button>
+        <button onclick="playSound('son3.mp3')">J'te monte en l'air</button>
+        <button onclick="playSound('son4.mp3')">J'vais te dire un bon truc</button>
+        <button onclick="playSound('son5.mp3')">On en reparlera</button>
+        <button onclick="playSound('son6.mp3')">Parle plus avec moi</button>
+        <button onclick="playSound('son7.mp3')">Sinon j'te monte en l'air</button>
+        <button onclick="playSound('son8.mp3')">Ta gueule</button>
+        <button onclick="playSound('son9.mp3')">T'as bien compris ?</button>
+        <button onclick="playSound('son10.mp3')">Tu sais quoi</button>
+        <button onclick="playSound('son11.mp3')">Tu gaz avec moi</button>
+        <button onclick="playSound('son12.mp3')">Tu joues à la grande là</button>
+    </div>
+
+    <script>
+        function playSound(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
